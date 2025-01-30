@@ -1,6 +1,6 @@
 const client = require('./main');
 require('./bot');
-require('./shiva');
+require('./arnab');
 
 const loadEventHandlers = () => {
     const colors = require('./UI/colors/colors');
@@ -105,7 +105,7 @@ const loadEventHandlers = () => {
     require('./events/music')(client);
     logSystem('LAVALINK MUSIC');
 
-    require('./shiva');
+    require('./arnab');
 
     // Footer
     console.log('\n' + '═'.repeat(60));
