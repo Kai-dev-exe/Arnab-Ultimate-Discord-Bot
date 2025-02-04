@@ -32,9 +32,7 @@ module.exports = {
         const existingConfig = await hentaiCommandCollection.findOne({ serverId });
         const ownerId = existingConfig?.ownerId;
 
-        if (memberId !== serverOwnerId && memberId !== ownerId) {
-            return interaction.reply({ content: 'Only the server owner or specified owners can use this command.', ephemeral: true });
-        }
+        
 
        
         await hentaiCommandCollection.updateOne(

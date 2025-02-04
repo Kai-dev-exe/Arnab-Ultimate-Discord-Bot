@@ -49,9 +49,7 @@ module.exports = {
         const memberId = interaction.user.id;
         const ownerId = (await voiceChannelCollection.findOne({ serverId }))?.ownerId;
 
-        if (memberId !== serverOwnerId && memberId !== ownerId) {
-            return interaction.reply({ content: 'Only the server owner or specified owners can use this command.', ephemeral: true });
-        }
+        
 
         await voiceChannelCollection.updateOne(
             { serverId },
